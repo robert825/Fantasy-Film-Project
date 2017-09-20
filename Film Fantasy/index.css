@@ -1,48 +1,79 @@
 @CHARSET "ISO-8859-1";
-h1 {
-          color: white;
-          background-color: blue;
-          /*background: url('filmroll.png');*/
-          font-family: sans-serif;
-          padding: 1%;
-          border: 0px;
-          border-radius: 10px;
-        }
+
+.div1 {
+	background-color: #cc1216;
+	height: 2px;
+	margin: 10px;
+}
+.div2 {
+	background-color: #cc1216;
+	border-radius: 10px;
+	border-width: 0%;
+	margin-left: auto;
+    margin-right: auto;
+    width: 40%;
+    padding: 1px;
+    margin-bottom: 10px;
+}
+.headerDiv {
+	position: relative;
+}
+.rules {
+	color: white;
+	font-family: tahoma;
+	font-size: 18px;
+	margin-left: 30px;
+}
+.view_league {
+	display: inline;
+	margin: 5px;
+	font-family: tahoma;
+	font-size: 15px;
+}
+.viewLeagueButton {
+	font-family: tahoma;
+   	font-size: 15px;
+   	background-color: black;
+   	color: white;
+   	border: 0px;
+   	border-radius: 5px;
+   	padding: 1%;
+   	cursor: pointer;
+   	display: inline;
+   	margin: 5px;
+}
+.div3 {
+	position: absolute;
+	right: 0px;
+	bottom: 0px;
+}
+.createLeagueButton {
+	font-family: tahoma;
+   	font-size: 20px;
+   	background-color: black;
+   	color: white;
+   	border: 0px;
+   	border-radius: 10px;
+   	padding: 1%;
+   	cursor: pointer;
+   	display: block;
+   	margin-left: auto;
+    margin-right: auto;
+}
 h2 {
-          color: black;
-          background-color: grey;
-          width: 90%;
-          display: block;
-          font-family: sans-serif;
-          padding: 1%;
-          border: 0px;
-          border-radius: 10px;
-          margin-left: auto;
-          margin-right: auto;
-        } 
+    color: black;
+    display: block;
+    font-family: tahoma;
+    font-size: 28px;
+    padding: 1%;
+    border: 0px;
+} 
 h3 {
-          color: white;
-          background-color: red;
-          width: 60%;
-          font-family: sans-serif;
-          padding: 1%;
-          border: 0px;
-          border-radius: 10px;
-          text-align: center;
-          margin-left: auto;
-          margin-right: auto;
-        }
-button {
-    	font-family: sans-serif;
-    	background-color: black;
-    	color: white;
-    	border: 0px;
-    	border-radius: 10px;
-    	padding: 1%;
-    	cursor: pointer;
-    	display: block;
-    	margin-left: auto;
-        margin-right: auto;
+    color: white;
+    width: 60%;
+    font-family: tahoma;
+    margin-left: 20px;
+    font-size: 25px
 }
 p {
    	margin-left: auto;
