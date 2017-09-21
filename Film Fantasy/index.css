@@ -12,8 +12,11 @@
 	margin-left: auto;
     margin-right: auto;
     width: 40%;
-    padding: 1px;
+    padding: 10px;
     margin-bottom: 10px;
+    font-family: tahoma;
+	font-size: 20px;
+	color: white;
 }
 .headerDiv {
 	position: relative;
@@ -21,14 +24,14 @@
 .rules {
 	color: white;
 	font-family: tahoma;
-	font-size: 18px;
+	font-size: 20px;
 	margin-left: 30px;
 }
 .view_league {
 	display: inline;
 	margin: 5px;
 	font-family: tahoma;
-	font-size: 15px;
+	font-size: 20px;
 }
 .viewLeagueButton {
 	font-family: tahoma;
@@ -37,7 +40,7 @@
    	color: white;
    	border: 0px;
    	border-radius: 5px;
-   	padding: 1%;
+   	padding: 2%;
    	cursor: pointer;
    	display: inline;
    	margin: 5px;
@@ -46,6 +49,12 @@
 	position: absolute;
 	right: 0px;
 	bottom: 0px;
+}
+.div4 {
+	display: inline;
+	font-family: tahoma;
+	font-size: 18px;
+	color: white;
 }
 .createLeagueButton {
 	font-family: tahoma;
@@ -60,6 +69,22 @@
    	margin-left: auto;
     margin-right: auto;
 }
+.formLabel {
+	font-family: tahoma;
+	font-size: 20px;
+	color: white;
+	margin-left: 30px
+}
+.questionMarkButton {
+	font-family: tahoma;
+   	font-size: 15px;
+   	background-color: black;
+   	color: white;
+   	border: 0px;
+   	border-radius: 100%;
+   	cursor: pointer;
+   	display: inline;
+}
 h2 {
     color: black;
     display: block;
@@ -70,7 +95,6 @@ h2 {
 } 
 h3 {
     color: white;
-    width: 60%;
     font-family: tahoma;
     margin-left: 20px;
     font-size: 25px

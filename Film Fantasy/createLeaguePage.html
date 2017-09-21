@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en-us">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+	<title>Fantasy Film League </title>
+	
+	<meta name="viewport">
+ 	<meta charset="utf-8">
+
+    <script src="http://code.jquery.com/jquery-3.2.1.min.js"></script>
+    
+    <link rel="stylesheet" type="text/css" href="index.css" />
+</head>
+<body>
+
+<div class="headerDiv">
+	<img src="C:\xampp\htdocs\CS4640\CS4640-Project\Film Fantasy\images\FantasyFilmLogo.jpg">
+</div>
+<div class="div1"></div>
+<h2>Set up your league: </h2>
+<div class="div2" style="width: 25%; padding: 20px">
+	<form class="formLabel" action="web-component" method="post"> Name of League: <input type="text" placeholder="enter league name..." /></form>
+<div class="formLabel">
+Number of Players:
+	<select name="Number of Players"> 
+		<option value="2">2</option> 
+		<option value="3">3</option> 
+		<option value="4">4</option> 
+		<option value="5">5</option> 
+		<option value="6">6</option>
+		<option value="7">7</option>
+		<option value="8">8</option>
+		<option value="9">9</option>
+		<option value="10">10</option>
+	</select>
+</div>
+<div class="formLabel">
+Number of Movies per Player:
+	<select name="Number of Movies per Player"> 
+		<option value="1">1</option>
+		<option value="2">2</option> 
+		<option value="3">3</option> 
+		<option value="4">4</option> 
+		<option value="5">5</option> 
+		<option value="6">6</option>
+		<option value="7">7</option>
+		<option value="8">8</option>
+		<option value="9">9</option>
+		<option value="10">10</option>
+	</select>
+</div>
+<div class="formLabel">
+Length of Season:
+	<select name="Length of Season"> 
+		<option value="1 month">1 month</option>
+		<option value="2 months">2 months</option> 
+		<option value="3 months">3 months</option> 
+		<option value="4 months">4 months</option> 
+		<option value="5 months">5 months</option> 
+		<option value="6 months">6 months</option>
+		<option value="7 months">7 months</option>
+		<option value="8 months">8 months</option>
+		<option value="9 months">9 months</option>
+		<option value="10 months">10 months</option>
+		<option value="11 months">11 months</option>
+		<option value="1 year">1 year</option>
+	</select>
+</div>
+<div class="formLabel">
+	Type of League: 
+	<div class="div4">
+		<br />
+		<input type="radio" name="type of league" value="Total box office revenue">Total box office revenue</input>
+		<button class="questionMarkButton" id="more"> ? </button>
+		<br />
+		<input type="radio" name="type of league" value="Round by round">Round by round</input>
+		<button class="questionMarkButton" id="more"> ? </button>
+	</div>
+</div>
+</div>
+
+<button class="createLeagueButton" id="create_league">Create League</button>
+
+</body>
+</html>
