@@ -1,50 +1,4 @@
 @CHARSET "ISO-8859-1";
-<<<<<<< HEAD
-h1 {
-          color: white;
-          background-color: blue;
-          /*background: url('filmroll.png');*/
-          font-family: sans-serif;
-          padding: 1%;
-          border: 0px;
-          border-radius: 10px;
-        }
-h2 {
-          color: black;
-          background-color: grey;
-          width: 90%;
-          display: block;
-          font-family: sans-serif;
-          padding: 1%;
-          border: 0px;
-          border-radius: 10px;
-          margin-left: auto;
-          margin-right: auto;
-        } 
-h3 {
-          color: white;
-          background-color: red;
-          width: 60%;
-          font-family: sans-serif;
-          padding: 1%;
-          border: 0px;
-          border-radius: 10px;
-          text-align: center;
-          margin-left: auto;
-          margin-right: auto;
-        }
-button {
-    	font-family: sans-serif;
-    	background-color: black;
-    	color: white;
-    	border: 0px;
-    	border-radius: 10px;
-    	padding: 1%;
-    	cursor: pointer;
-    	display: block;
-    	margin-left: auto;
-        margin-right: auto;
-=======
 
 .div1 {
 	background-color: #cc1216;
@@ -95,6 +49,7 @@ button {
 	position: absolute;
 	right: 0px;
 	bottom: 0px;
+	display: inline;
 }
 .div4 {
 	display: inline;
@@ -144,7 +99,6 @@ h3 {
     font-family: tahoma;
     margin-left: 20px;
     font-size: 25px
->>>>>>> 56e0b0acd9f0f0bc67dddbaa667939399cddbf16
 }
 p {
    	margin-left: auto;
@@ -153,8 +107,4 @@ p {
 form {
    	margin-left: auto;
     margin-right: auto;
-<<<<<<< HEAD
 }
-=======
-}
->>>>>>> 56e0b0acd9f0f0bc67dddbaa667939399cddbf16
