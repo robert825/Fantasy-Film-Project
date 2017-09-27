@@ -11,8 +11,8 @@
     
     <link rel="stylesheet" type="text/css" href="index.css" />
 </head>
-	<body>
-
+	<body onload="startDraft()">
+		<script type="text/javascript" src="index.js"></script>
 		<div class="headerDiv">
 			<a href="homePage.html"><img src="images\FantasyFilmLogo.jpg"></a>
 		</div>
@@ -35,35 +35,38 @@
 			<br/>
 			<br/>
 			<table class="movieSelectBoxTable" border="1" cellspacing="0" cellpadding="5" width="100%"> 
+				<thead>
+				<tr>
+					<th>Title</th>
 				<tr>      
-				  <td align="center">Movie 1</td> 
+				  <td align="center" class="available" id="m1" onclick="draft('m1')">Movie 1</td>
 				</tr>
 				<tr>      
-				  <td align="center">Movie 2</td>
+				  <td align="center" class="available" id="m2" onclick="draft('m2')">Movie 2</td>
 				</tr>
 				<tr>      
-				  <td align="center">Movie 3</td>
+				  <td align="center" class="available" id="m3" onclick="draft('m3')">Movie 3</td>
 				</tr>
 				<tr>      
-				  <td align="center">Movie 4</td>
+				  <td align="center" class="available" id="m4" onclick="draft('m4')">Movie 4</td>
 				</tr>
 				<tr>      
-				  <td align="center">Movie 5</td>
+				  <td align="center" class="available" id="m5" onclick="draft('m5')">Movie 5</td>
 				</tr>
 				<tr>      
-				  <td align="center">Movie 6</td>
+				  <td align="center" class="available" id="m6" onclick="draft('m6')">Movie 6</td>
 				</tr>
 				<tr>      
-				  <td align="center">Movie 7</td>
+				  <td align="center" class="available" id="m7" onclick="draft('m7')">Movie 7</td>
 				</tr>
 				<tr>      
-				  <td align="center">Movie 8</td>
+				  <td align="center" class="available" id="m8" onclick="draft('m8')">Movie 8</td>
 				</tr>
 				<tr>      
-				  <td align="center">Movie 9</td>
+				  <td align="center" class="available" id="m9" onclick="draft('m9')">Movie 9</td>
 				</tr>
 				<tr>      
-				  <td align="center">Movie 10</td>
+				  <td align="center" class="available" id="m10" onclick="draft('m10')">Movie 10</td>
 				</tr>
 			</table>
 		</div>
@@ -79,43 +82,43 @@
 				</tr>
 				<tr>   
 					<th>1</th>  
-				  	<td align="center"></td>
-				  	<td align="center"></td>
-				  	<td align="center"></td>
-				  	<td align="center"></td>
-				  	<td align="center"></td>
+				  	<td align="center" id="1"></td>
+				  	<td align="center" id="2"></td>
+				  	<td align="center" id="3"></td>
+				  	<td align="center" id="4"></td>
+				  	<td align="center" id="5"></td>
 				</tr>
 				<tr>      
-					<th align="center">2</th>  
-				  	<td align="center"></td>
-				  	<td align="center"></td>
-				  	<td align="center"></td>
-				  	<td align="center"></td>
-				  	<td align="center"></td>
+					<th>2</th>  
+				  	<td align="center" id="10"></td>
+				  	<td align="center" id="9"></td>
+				  	<td align="center" id="8"></td>
+				  	<td align="center" id="7"></td>
+				  	<td align="center" id="6"></td>
 				</tr>
 				<tr>      
 				  	<th>3</th>  
-				  	<td align="center"></td>
-				  	<td align="center"></td>
-				  	<td align="center"></td>
-				  	<td align="center"></td>
-				  	<td align="center"></td>
+				  	<td align="center" id="11"></td>
+				  	<td align="center" id="12"></td>
+				  	<td align="center" id="13"></td>
+				  	<td align="center" id="14"></td>
+				  	<td align="center" id="15"></td>
 				</tr>
 				<tr>      
 				  	<th>4</th>  
-				  	<td align="center"></td>
-				  	<td align="center"></td>
-				  	<td align="center"></td>
-				  	<td align="center"></td>
-				  	<td align="center"></td>
+				  	<td align="center" id="20"></td>
+				  	<td align="center" id="19"></td>
+				  	<td align="center" id="18"></td>
+				  	<td align="center" id="17"></td>
+				  	<td align="center" id="16"></td>
 				</tr>
 				<tr>      
 				  	<th>5</th>  
-				  	<td align="center"></td>
-				  	<td align="center"></td>
-				  	<td align="center"></td>
-				  	<td align="center"></td>
-				  	<td align="center"></td>
+				  	<td align="center" id="21"></td>
+				  	<td align="center" id="22"></td>
+				  	<td align="center" id="23"></td>
+				  	<td align="center" id="24"></td>
+				  	<td align="center" id="25"></td>
 				</tr>
 			</table>
 		</div>			

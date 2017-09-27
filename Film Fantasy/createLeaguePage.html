@@ -11,8 +11,8 @@
     
     <link rel="stylesheet" type="text/css" href="index.css" />
 </head>
-	<body>
-	
+	<body onload="setFocus()">
+		<script type="text/javascript" src="index.js"></script>
 		<div class="headerDiv">
 			<a href="homePage.html"><img src="images\FantasyFilmLogo.jpg"></a>
 		</div>
@@ -64,10 +64,10 @@
 			</select></td></tr>
 			<tr><td>Type of League:</td> 
 				<td><input type="radio" name="type of league" value="Total box office revenue">Total box office revenue</input>
-				<button class="questionMarkButton" id="more"> ? </button>
+				<button class="questionMarkButton" id="more" onclick="qMark(0)"> ? </button>
 				<br />
 				<input type="radio" name="type of league" value="Round by round">Round by round</input>
-				<button class="questionMarkButton" id="more"> ? </button></td></tr>
+				<button class="questionMarkButton" id="more" onclick="qMark(1)"> ? </button></td></tr>
 				</table>
 		</form>
 		</div>
