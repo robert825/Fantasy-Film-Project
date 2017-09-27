@@ -14,15 +14,16 @@
 	<body>
 	
 		<div class="headerDiv">
-			<img src="C:\xampp\htdocs\CS4640\CS4640-Project\Film Fantasy\images\FantasyFilmLogo.jpg">
+			<a href="homePage.html"><img src="images\FantasyFilmLogo.jpg"></a>
 		</div>
 		<div class="div1"></div>
 		<h2>Set up your league: </h2>
-		<div class="div2" style="padding: 20px; width: 21%;">
+		<div class="div2" style="padding: 20px; width: 450px;">
 			<form action="web-component" method="post"> 
-				Name of League: <input type="text" placeholder="enter league name..." />
-		Number of Players:
-			<select name="Number of Players"> 
+			<table>
+				<tr><td>Name of League:</td><td> <input type="text" placeholder="enter league name..." /></td><tr>
+		<tr><td>Players:</td>
+			<td><select name="Players"> 
 				<option value="2">2</option> 
 				<option value="3">3</option> 
 				<option value="4">4</option> 
@@ -32,9 +33,9 @@
 				<option value="8">8</option>
 				<option value="9">9</option>
 				<option value="10">10</option>
-			</select>
-		Number of Movies per Player:
-			<select name="Number of Movies per Player"> 
+			</select></td></tr>
+		<tr><td>Movies per Player:</td>
+			<td><select name="Movies per Player"> 
 				<option value="1">1</option>
 				<option value="2">2</option> 
 				<option value="3">3</option> 
@@ -45,9 +46,9 @@
 				<option value="8">8</option>
 				<option value="9">9</option>
 				<option value="10">10</option>
-			</select>
-		Length of Season:
-			<select name="Length of Season"> 
+			</select></td></tr>
+		<tr><td>Length of Season:</td>
+			<td><select name="Length of Season"> 
 				<option value="1 month">1 month</option>
 				<option value="2 months">2 months</option> 
 				<option value="3 months">3 months</option> 
@@ -60,18 +61,18 @@
 				<option value="10 months">10 months</option>
 				<option value="11 months">11 months</option>
 				<option value="1 year">1 year</option>
-			</select>
-			Type of League: 
-				<br />
-				<input type="radio" name="type of league" value="Total box office revenue">Total box office revenue</input>
+			</select></td></tr>
+			<tr><td>Type of League:</td> 
+				<td><input type="radio" name="type of league" value="Total box office revenue">Total box office revenue</input>
 				<button class="questionMarkButton" id="more"> ? </button>
 				<br />
 				<input type="radio" name="type of league" value="Round by round">Round by round</input>
-				<button class="questionMarkButton" id="more"> ? </button>
+				<button class="questionMarkButton" id="more"> ? </button></td></tr>
+				</table>
 		</form>
 		</div>
 		
-		<form action="C:\xampp\htdocs\CS4640\CS4640-Project\Film Fantasy\addPlayersPage.html">
+		<form action="addPlayersPage.html">
 		<button class="createLeagueButton" id="create_league">Create League</button>
 		</form>
 	
