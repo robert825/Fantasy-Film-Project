@@ -24,6 +24,7 @@
 	font-family: tahoma;
 	font-size: 20px;
 	margin-left: 30px;
+	margin-right: 20px;
 }
 .view_league {
 	display: inline;
@@ -151,7 +152,8 @@ form {
 	color: white;
 }
 .available:hover {
-	background-color: yellow;
+	background-color: white;
+	color: black;
 	cursor: pointer;
 }
 .available {
