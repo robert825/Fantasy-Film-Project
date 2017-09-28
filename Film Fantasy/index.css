@@ -2,6 +2,7 @@
 	background-color: #cc1216;
 	height: 2px;
 	margin: 10px;
+	position: static;
 }
 .div2 {
 	background-color: #cc1216;
@@ -15,6 +16,9 @@
     font-family: tahoma;
 	font-size: 20px;
 	color: white;
+	opacity: 0.9;
+	z-index: -1;
+	position: static;
 }
 .headerDiv {
 	position: relative;
@@ -46,9 +50,8 @@
 }
 .div3 {
 	position: absolute;
-	right: 0px;
-	bottom: 0px;
 	display: inline;
+	transform: translate(400px, 100px)
 }
 .createLeagueButton {
 	font-family: tahoma;
@@ -85,6 +88,8 @@
     font-family: tahoma;
 	font-size: 20px;
 	color: white;
+	opacity: 0.9;
+	z-index: -1;
 }
 .movieSelectBoxTable {
 	border-style: solid;
