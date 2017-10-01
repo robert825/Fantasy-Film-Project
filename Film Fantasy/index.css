@@ -35,6 +35,7 @@
 	margin: 5px;
 	font-family: tahoma;
 	font-size: 20px;
+	transform: translate(400px, 0px)
 }
 .viewLeagueButton {
 	font-family: tahoma;
@@ -43,7 +44,7 @@
    	color: white;
    	border: 0px;
    	border-radius: 5px;
-   	padding: 2%;
+   	padding: 10px;
    	cursor: pointer;
    	display: inline;
    	margin: 5px;
@@ -51,7 +52,7 @@
 .div3 {
 	position: absolute;
 	display: inline;
-	transform: translate(400px, 100px)
+	transform: translate(350px, 100px);
 }
 .createLeagueButton {
 	font-family: tahoma;
