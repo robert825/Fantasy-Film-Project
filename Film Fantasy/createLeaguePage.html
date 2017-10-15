@@ -10,6 +10,7 @@
     <script src="http://code.jquery.com/jquery-3.2.1.min.js"></script>
     
     <link rel="stylesheet" type="text/css" href="index.css" />
+    
 </head>
 	<body onload="setFocus()">
 		<script type="text/javascript" src="index.js"></script>
@@ -18,12 +19,14 @@
 		</div>
 		<div class="div1"></div>
 		<h2>Set up your league: </h2>
+		
+		<form action="createLeague.php" method="post"> 
 		<div class="div2" style="padding: 20px; width: 450px;">
-			<form action="" method="post"> 
 			<table>
-				<tr><td>Name of League:</td><td> <input type="text" placeholder="enter league name..." /></td><tr>
+				<tr><td>Name of League:</td><td> <input name="name" type="text" placeholder="enter league name..." /></td><tr>
 		<tr><td>Players:</td>
-			<td><select name="Players"> 
+			<td><select name="players"> 
+				<!-- <option value=""></option>  -->
 				<option value="2">2</option> 
 				<option value="3">3</option> 
 				<option value="4">4</option> 
@@ -35,7 +38,8 @@
 				<option value="10">10</option>
 			</select></td></tr>
 		<tr><td>Movies per Player:</td>
-			<td><select name="Movies per Player"> 
+			<td><select name="movies"> 
+				<!-- <option value=""></option>  -->
 				<option value="1">1</option>
 				<option value="2">2</option> 
 				<option value="3">3</option> 
@@ -48,7 +52,8 @@
 				<option value="10">10</option>
 			</select></td></tr>
 		<tr><td>Length of Season:</td>
-			<td><select name="Length of Season"> 
+			<td><select name="season"> 
+				<!-- <option value=""></option>  -->
 				<option value="1 month">1 month</option>
 				<option value="2 months">2 months</option> 
 				<option value="3 months">3 months</option> 
@@ -63,18 +68,15 @@
 				<option value="1 year">1 year</option>
 			</select></td></tr>
 			<tr><td>Type of League:</td> 
-				<td><input type="radio" name="type of league" value="Total box office revenue">Total box office revenue</input>
+				<td><input type="radio" name="league" value="Total box office revenue">Total box office revenue</input>
 				<button class="questionMarkButton" id="more" onclick="qMark(0)"> ? </button>
 				<br />
-				<input type="radio" name="type of league" value="Round by round">Round by round</input>
+				<input type="radio" name="league" value="Round by round">Round by round</input>
 				<button class="questionMarkButton" id="more" onclick="qMark(1)"> ? </button></td></tr>
 				</table>
-		</form>
 		</div>
-		
-		<form action="addPlayersPage.html">
-		<button class="createLeagueButton" id="create_league">Create League</button>
-		</form>
+  			<input type = "submit" name = "submit" value = "Create League" class = "createLeagueButton" />
+ 		</form> 
 	
 	</body>
 </html>
