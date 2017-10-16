@@ -9,11 +9,11 @@
 
     <script src="http://code.jquery.com/jquery-3.2.1.min.js"></script>
     
-    <?php
+    <!-- <?php
     	if ($_SERVER['REQUEST_METHOD'] == 'POST) {
 		$players[] = $_POST['name'];
 
-    ?>
+    ?> -->
     
     <link rel="stylesheet" type="text/css" href="index.css" />
 </head>
@@ -24,10 +24,10 @@
 		</div>
 		<div class="div1"></div>
 		<h2>Add Players: </h2>
-		<form>
+		<!-- <?php include('addPlayers1.php') ?> -->
+		<!--<form>
 		<div id="div2" class="div2" style="padding: 20px; width: 300px">
-		<?php
-			session_start();
+		 <?php
 				$numPlayers = $_SESSION['players_global'];
 				while ($numPlayers != 0) {
 					echo 'Player ' . $numPlayers . ': <input type="text" placeholder="enter player "' . $numPlayers . ' name..." />';
@@ -36,14 +36,17 @@
     	?>
     		</div>
     		<input type = "submit" name = "submit" value = "Start Draft" class = "createLeagueButton" />
-    	</form>
-			<!-- <form>
+    	</form>-->
+			<form>
+				<div id="div2" class="div2" style="padding: 20px; width: 300px">
 				Player 1: <input type="text" placeholder="enter player 1 name..." />
 				Player 2: <input type="text" placeholder="enter player 2 name..." />
 				Player 3: <input type="text" placeholder="enter player 3 name..." />
 				Player 4: <input type="text" placeholder="enter player 4 name..." />
 				Player 5: <input type="text" placeholder="enter player 5 name..." />
-			</form> -->
+				</div>
+				<input type = "submit" name = "submit" value = "Start Draft" class = "createLeagueButton" />
+			</form>
 <!-- 		<form action="draftLobbyPage.html">
 		<button class="createLeagueButton" id="start_draft">Start Draft</button>
 		</form> -->
