@@ -38,3 +38,7 @@ function draft(movie)
 	currentSlot.style.border = "thick solid red";
 	currentSlot.innerHTML = "select movie...";
 }
+
+function setPlayerName() {
+	
+}

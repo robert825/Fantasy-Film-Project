@@ -9,46 +9,76 @@
 
     <script src="http://code.jquery.com/jquery-3.2.1.min.js"></script>
     
-    <!-- <?php
-    	if ($_SERVER['REQUEST_METHOD'] == 'POST) {
-		$players[] = $_POST['name'];
-
-    ?> -->
+    <?php
+    	session_start();
+    ?>
+    
+    <script type="text/javascript" src="index.js"></script>
     
     <link rel="stylesheet" type="text/css" href="index.css" />
 </head>
-	<body onload="setFocus()">
-		<script type="text/javascript" src="index.js"></script>
+	<body onload="setFocus()" >
 		<div class="headerDiv">
 			<a href="homePage.html"><img src="images\FantasyFilmLogo.jpg"></a>
 		</div>
 		<div class="div1"></div>
 		<h2>Add Players: </h2>
 		<!-- <?php include('addPlayers1.php') ?> -->
-		<!--<form>
-		<div id="div2" class="div2" style="padding: 20px; width: 300px">
-		 <?php
-				$numPlayers = $_SESSION['players_global'];
-				while ($numPlayers != 0) {
-					echo 'Player ' . $numPlayers . ': <input type="text" placeholder="enter player "' . $numPlayers . ' name..." />';
-					$numPlayers--;
-				}
-    	?>
-    		</div>
-    		<input type = "submit" name = "submit" value = "Start Draft" class = "createLeagueButton" />
-    	</form>-->
-			<form>
+			<form action="addPlayers.php" method="post">
 				<div id="div2" class="div2" style="padding: 20px; width: 300px">
-				Player 1: <input type="text" placeholder="enter player 1 name..." />
-				Player 2: <input type="text" placeholder="enter player 2 name..." />
-				Player 3: <input type="text" placeholder="enter player 3 name..." />
-				Player 4: <input type="text" placeholder="enter player 4 name..." />
-				Player 5: <input type="text" placeholder="enter player 5 name..." />
+				
+				<!-- <?PHP
+					addPlayers($_SESSION['players_global']);
+				?> -->
+				
+				<label name="playerLabels[]" class="playerLabel">Player 1: </label>
+				<input name="playerNames[]" class="player" type="text" placeholder="enter player 1 name..." />
+				<label name = "playerLabels[]" class="playerLabel">Player 2: </label>
+				<input name="playerNames[]" class="player" type="text" placeholder="enter player 2 name..." />
+				<label name = "playerLabels[]" class="playerLabel">Player 3: </label>
+				<input name="playerNames[]" class="player" type="text" placeholder="enter player 3 name..." />
+				<label name = "playerLabels[]" class="playerLabel">Player 4: </label>
+				<input name="playerNames[]" class="player" type="text" placeholder="enter player 4 name..." />
+				<label name = "playerLabels[]" class="playerLabel">Player 5: </label>
+				<input name="playerNames[]" class="player" type="text" placeholder="enter player 5 name..." />
+				<label name = "playerLabels[]" class="playerLabel">Player 6: </label>
+				<input name="playerNames[]" class="player" type="text" placeholder="enter player 6 name..." />
+				<label name = "playerLabels[]" class="playerLabel">Player 7: </label>
+				<input name="playerNames[]" class="player" type="text" placeholder="enter player 7 name..." />
+				<label name = "playerLabels[]" class="playerLabel">Player 8: </label>
+				<input name="playerNames[]" class="player" type="text" placeholder="enter player 8 name..." />
+				<label name="playerLabel[]" class="playerLabel">Player 9: </label>
+				<input name="playerNames[]" class="player" type="text" placeholder="enter player 9 name..." />
+				<label name = "playerLabels[]" class="playerLabel">Player 10: </label>
+				<input name="playerNames[]" class="player" type="text" placeholder="enter player 10 name..." />
 				</div>
 				<input type = "submit" name = "submit" value = "Start Draft" class = "createLeagueButton" />
 			</form>
-<!-- 		<form action="draftLobbyPage.html">
-		<button class="createLeagueButton" id="start_draft">Start Draft</button>
-		</form> -->
+			
+		
+		<!-- <?PHP
+			session_start();
+			function addPlayers($num) 
+			{
+				for ($i=0; $i < $num; $i++) {
+					echo '<label name = "playerLabels[]" class="playerLabel">Player ' . $i+1 . ': </label>';
+					echo '<input name="playerNames[]" class="player" type="text" placeholder="enter player ' . $i+1 . 'name..." />';
+				}
+			}
+		?> -->
+	
+		<script type="text/javascript" > 
+		function addPlayers(num) 
+		{
+			var playerList = document.getElementsByClassName("player");
+			var labelList = document.getElementsByClassName("playerLabel");
+			for (var i=9; i >= num; i--) {
+				playerList[i].style.display = "none";
+				labelList[i].style.display = "none";
+			}
+		}
+		addPlayers(3);
+		//addPlayers("<?php session_start(); echo $_SESSION['players_global']; ?>");
+		</script>
 	</body>
 </html>

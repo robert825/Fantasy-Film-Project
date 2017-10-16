@@ -1,4 +1,4 @@
- 	<?php
+ 	<?PHP
  	session_start();
     $players = $movies = NULL;
     $key = "";
@@ -26,11 +26,16 @@
 			$_SESSION['league_global'] = trim($_POST['league']);
 		}
 		
-		if ($name != NULL && $players != NULL && $movies != NULL && $season != NULL && $league != NULL) {
+		if ($_SESSION['name_global'] != NULL && 
+			$_SESSION['players_global'] != NULL && 
+			$_SESSION['movies_global'] != NULL && 
+			$_SESSION['season_global'] != NULL && 
+			$_SESSION['league_global'] != NULL)
+		{	
 			header("Location: addPlayersPage.html");
 		}
 		else {
-			header("Location: createLeaguePage.html");
+			echo "There are empty form fields. Please complete all entries.";
 		}
 	}
 	?>
