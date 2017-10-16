@@ -268,12 +268,12 @@
 		xmlhttp.open("GET", "createLeague.php", true);
 		xmlhttp.send();
 		
-		
+		//fill in names
 		var xmlhttp2 = new XMLHttpRequest();
 		xmlhttp2.onreadystatechange = function() {
 		    if (this.readyState == 4 && this.status == 200) {
 		        myObj = JSON.parse(this.responseText);
-		        console.log(myObj);
+		        console.log(myObj[0]);
 		    }
 		};
 		

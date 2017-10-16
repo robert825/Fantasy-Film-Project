@@ -9,14 +9,15 @@
 					unSet($playerNames[$i]);
 				}
 			}
+			$_SESSION['playerNames_global'] = $playerNames;
 			if (count($_SESSION['playerNames_global']) == $_SESSION['players_global']) {
 				header("Location: draftLobbyPage.html");
 			}
 			else {
-				echo "Please enter a name for all players.";
+				//echo "Please enter a name for all players.";
 			}
 		}
 		$_SESSION['playerNames_global'] = $playerNames;
-		$myJSON2 = json_encode($playerNames);
-		echo $myJSON2;
+		$myJSON = json_encode($_SESSION['playerNames_global']);
+		echo $myJSON;
 	?>
