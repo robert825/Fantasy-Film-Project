@@ -14,7 +14,12 @@
 				header("Location: draftLobbyPage.html");
 			}
 			else {
-				echo "Please enter a name for all players.";
+				//echo "Please enter a name for all players.";
 			}
 		}
+
+		$_SESSION['playerNames_global'] = $playerNames;
+		$myJSON = json_encode($_SESSION['playerNames_global']);
+		echo $myJSON;
+
 	?>

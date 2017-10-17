@@ -13,24 +13,13 @@
     <link rel="stylesheet" type="text/css" href="index.css" />
 </head>
 	<body onload="setFocus()" >
-		<?PHP session_start(); ?>
 		<div class="headerDiv">
 			<a href="homePage.html"><img src="images\FantasyFilmLogo.jpg"></a>
 		</div>
 		<div class="div1"></div>
 		<h2>Add Players: </h2>
-		<!-- <?php include('addPlayers1.php') ?> -->
 			<form action="addPlayers.php" method="post">
 				<div id="div2" class="div2" style="padding: 20px; width: 300px">
-				
-				<!-- <?PHP
-					for($i=0; $i<$_SESSION['players_global']; $i++) {
-				?>
-				<label name = "playerLabels[]" class="playerLabel" value=<?PHP echo 'Player ' . $i+1 . ': '; ?> />
-				<input name="playerNames[]" class="player" type="text" placeholder=<?PHP echo 'enter player ' . $i+1 . 'name...'; ?> />
-				<?PHP
-					}
-				?> -->
 				
 				<label name="playerLabels[]" class="playerLabel">Player 1: </label>
 				<input name="playerNames[]" class="player" type="text" placeholder="enter player 1 name..." />
@@ -66,8 +55,18 @@
 				labelList[i].style.display = "none";
 			}
 		}
-		addPlayers(3);
-		//addPlayers("<?php session_start(); echo $_SESSION['players_global']; ?>");
+		
+		var xmlhttp = new XMLHttpRequest();
+		xmlhttp.onreadystatechange = function() {
+		    if (this.readyState == 4 && this.status == 200) {
+		        myObj = JSON.parse(this.responseText);
+		        addPlayers(myObj[1]);
+		        //console.log(myObj);
+		    }
+		};
+		
+		xmlhttp.open("GET", "createLeague.php", true);
+		xmlhttp.send();
 		</script>
 	</body>
 </html>

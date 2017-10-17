@@ -1,9 +1,9 @@
  	<?PHP
  	session_start();
     $players = $movies = NULL;
-    $key = "";
 	$name = $season = $league = NULL;
 
+			
 	if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 		if (isSet($_POST['name'])) {
 			$name = trim($_POST['name']);
@@ -38,4 +38,8 @@
 			echo "There are empty form fields. Please complete all entries.";
 		}
 	}
+		//$leagueDetails = array($name, $players, $movies, $season, $league);
+		$_SESSION['league_details'] = array($_SESSION['name_global'], $_SESSION['players_global'], $_SESSION['movies_global'], $_SESSION['season_global'], $_SESSION['league_global']);
+		$myJSON = json_encode($_SESSION['league_details']);
+		echo $myJSON;
 	?>

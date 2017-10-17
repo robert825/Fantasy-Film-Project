@@ -255,8 +255,30 @@
 				roundsList[i].style.display = "none";
 			}
 		}
-		buildLobby(10,10);
-		//buildLobby("<?php session_start(); echo $_SESSION['movies_global']; ?>", "<?php session_start(); echo $_SESSION['players_global']; ?>");
+		
+		var xmlhttp = new XMLHttpRequest();
+		xmlhttp.onreadystatechange = function() {
+		    if (this.readyState == 4 && this.status == 200) {
+		        myObj = JSON.parse(this.responseText);
+		        buildLobby(myObj[2], myObj[1]);
+		        console.log(myObj);
+		    }
+		};
+		
+		xmlhttp.open("GET", "createLeague.php", true);
+		xmlhttp.send();
+		
+		//fill in names
+		var xmlhttp2 = new XMLHttpRequest();
+		xmlhttp2.onreadystatechange = function() {
+		    if (this.readyState == 4 && this.status == 200) {
+		        myObj = JSON.parse(this.responseText);
+		        console.log(myObj[0]);
+		    }
+		};
+		
+		xmlhttp2.open("GET", "addPlayers.php", true);
+		xmlhttp2.send();
 		</script>
 	</body>
 		
