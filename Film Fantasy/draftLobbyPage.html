@@ -13,15 +13,7 @@
 </head>
 	<body onload="startDraft()">
 		<?php
-			$player1[];
-			$player2[]'
-			$player3[];
-			$player4[];
-			$player5[];
-			$movies[];
-			function addMovie($player, $movie) {
-				$player[] = $movie;
-			}
+			session_start();
 		?>
 		<script type="text/javascript" src="index.js"></script>
 		<div class="headerDiv">
@@ -85,16 +77,16 @@
 			<table class="movieSelectBoxTable" border="1" cellspacing="0" cellpadding="5"> 
 				<tr>      
 				  	<th>Round</th>
-				  	<th class="players">Player 1</th>
-				  	<th class="players">Player 2</th> 
-				  	<th class="players">Player 3</th>
-				  	<th class="players">Player 4</th>
-					<th class="players">Player 5</th> 
-					<th class="players">Player 6</th>
-				  	<th class="players">Player 7</th> 
-				  	<th class="players">Player 8</th>
-				  	<th class="players">Player 9</th>
-					<th class="players">Player 10</th> 
+				  	<th class="players" id="p1">Player 1</th>
+				  	<th class="players" id="p2">Player 2</th> 
+				  	<th class="players" id="p3">Player 3</th>
+				  	<th class="players" id="p4">Player 4</th>
+					<th class="players" id="p5">Player 5</th> 
+					<th class="players" id="p6">Player 6</th>
+				  	<th class="players" id="p7">Player 7</th> 
+				  	<th class="players" id="p8">Player 8</th>
+				  	<th class="players" id="p9">Player 9</th>
+					<th class="players" id="p10">Player 10</th> 
 				</tr>
 				<tr class="rounds">   
 					<th>1</th>  
@@ -261,7 +253,6 @@
 		    if (this.readyState == 4 && this.status == 200) {
 		        myObj = JSON.parse(this.responseText);
 		        buildLobby(myObj[2], myObj[1]);
-		        console.log(myObj);
 		    }
 		};
 		
@@ -269,16 +260,22 @@
 		xmlhttp.send();
 		
 		//fill in names
+		var myObj2 = [];
 		var xmlhttp2 = new XMLHttpRequest();
 		xmlhttp2.onreadystatechange = function() {
 		    if (this.readyState == 4 && this.status == 200) {
-		        myObj = JSON.parse(this.responseText);
-		        console.log(myObj[0]);
+		        myObj2 = JSON.parse(this.responseText);
+		        for(var i=0; i<myObj2.length; i++){
+		        	var id = i + 1;
+		        	document.getElementById('p' + id).innerHTML = myObj2[i];
+		        	
+		        }		        
 		    }
 		};
 		
 		xmlhttp2.open("GET", "addPlayers.php", true);
 		xmlhttp2.send();
+		
 		</script>
 	</body>
 		
