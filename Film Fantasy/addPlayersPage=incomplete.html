@@ -12,7 +12,7 @@
     
     <link rel="stylesheet" type="text/css" href="index.css" />
 </head>
-	<body onload="setFocus(); alert('Please enter a name for each player!')" >
+	<body onload="setFocus()" >
 		<div class="headerDiv">
 			<a href="homePage.html"><img src="images\FantasyFilmLogo.jpg"></a>
 		</div>
@@ -54,6 +54,8 @@
 				playerList[i].style.display = "none";
 				labelList[i].style.display = "none";
 			}
+			alert('Please enter a name for each player!');
+			window.location = 'addPlayersPage.html';
 		}
 		
 		var xmlhttp = new XMLHttpRequest();
