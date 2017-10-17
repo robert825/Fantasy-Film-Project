@@ -18,14 +18,3 @@
 			}
 		}
 	?>
-	
-	<?PHP
-			session_start();
-			function addPlayers($num) 
-			{
-				for ($i=0; $i < $num; $i++) {
-					echo '<label name = "playerLabels[]" class="playerLabel">Player ' . $i+1 . ': </label>';
-					echo '<input name="playerNames[]" class="player" type="text" placeholder="enter player ' . $i+1 . 'name..." />';
-				}
-			}
-		?>

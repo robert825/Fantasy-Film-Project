@@ -23,21 +23,16 @@
 			<form action="addPlayers.php" method="post">
 				<div id="div2" class="div2" style="padding: 20px; width: 300px">
 				
-				<?PHP
+				<!-- <?PHP
 					for($i=0; $i<$_SESSION['players_global']; $i++) {
 				?>
 				<label name = "playerLabels[]" class="playerLabel" value=<?PHP echo 'Player ' . $i+1 . ': '; ?> />
 				<input name="playerNames[]" class="player" type="text" placeholder=<?PHP echo 'enter player ' . $i+1 . 'name...'; ?> />
 				<?PHP
 					}
-				?>
-				
-				
-				<!-- <?PHP
-					addPlayers($_SESSION['players_global']);
 				?> -->
 				
-				<!-- <label name="playerLabels[]" class="playerLabel">Player 1: </label>
+				<label name="playerLabels[]" class="playerLabel">Player 1: </label>
 				<input name="playerNames[]" class="player" type="text" placeholder="enter player 1 name..." />
 				<label name = "playerLabels[]" class="playerLabel">Player 2: </label>
 				<input name="playerNames[]" class="player" type="text" placeholder="enter player 2 name..." />
@@ -56,22 +51,10 @@
 				<label name="playerLabel[]" class="playerLabel">Player 9: </label>
 				<input name="playerNames[]" class="player" type="text" placeholder="enter player 9 name..." />
 				<label name = "playerLabels[]" class="playerLabel">Player 10: </label>
-				<input name="playerNames[]" class="player" type="text" placeholder="enter player 10 name..." /> -->
+				<input name="playerNames[]" class="player" type="text" placeholder="enter player 10 name..." />
 				</div>
 				<input type = "submit" name = "submit" value = "Start Draft" class = "createLeagueButton" />
 			</form>
-			
-		
-		<!-- <?PHP
-			session_start();
-			function addPlayers($num) 
-			{
-				for ($i=0; $i < $num; $i++) {
-					echo '<label name = "playerLabels[]" class="playerLabel">Player ' . $i+1 . ': </label>';
-					echo '<input name="playerNames[]" class="player" type="text" placeholder="enter player ' . $i+1 . 'name..." />';
-				}
-			}
-		?> -->
 	
 		<script type="text/javascript" > 
 		function addPlayers(num) 
