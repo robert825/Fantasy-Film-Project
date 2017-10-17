@@ -1,8 +1,7 @@
- 	<?PHP
+<?PHP
  	session_start();
     $players = $movies = NULL;
 	$name = $season = $league = NULL;
-
 			
 	if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 		if (isSet($_POST['name'])) {
@@ -35,7 +34,7 @@
 			header("Location: addPlayersPage.html");
 		}
 		else {
-			echo "There are empty form fields. Please complete all entries.";
+			header("Location: createLeaguePage=incomplete.html");
 		}
 	}
 		$_SESSION['league_details'] = array($_SESSION['name_global'], $_SESSION['players_global'], $_SESSION['movies_global'], $_SESSION['season_global'], $_SESSION['league_global']);

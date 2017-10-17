@@ -1,4 +1,4 @@
- 	<?PHP
+<?PHP
  		session_start();
  		$playerNames = [];
 		if ($_SERVER['REQUEST_METHOD'] == 'POST') {
@@ -14,10 +14,9 @@
 				header("Location: draftLobbyPage.html");
 			}
 			else {
-				echo "Please enter a name for all players.";
+				header("Location: addPlayersPage=incomplete.html");
 			}
 		}
 		$myJSON = json_encode($_SESSION['playerNames_global']);
 		echo $myJSON;
-
 	?>
