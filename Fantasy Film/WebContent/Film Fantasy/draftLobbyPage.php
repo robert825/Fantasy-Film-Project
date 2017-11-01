@@ -71,7 +71,9 @@
 				</tr>
 			</table>
 		</div>
+
 		<?php
+		echo '<form action="../../src/viewLeaguePage.java" method="post">';
 		 echo '<div class="playerTableDiv">';
 			echo '<table class="movieSelectBoxTable" border="1" cellspacing="0" cellpadding="5">'; 
 				echo '<tr>';      
@@ -102,21 +104,20 @@
 				}
 			echo '</table>';
 		echo '</div>';	
-		?>		
+		
+		?>
 		
 		</div>
+		
+		<?php		
+		echo '<br/>';
+		echo '<br/>';
+		echo '<br/>';
+			echo '<input type = "submit" name = "submit" value = "Finish Draft" class = "finishButton" />';
+			echo '</form>';
+		echo '<br />';
 
-		
-		<br/>
-		<br/>
-		<br/>
-		
-		<div>
-			<form action="viewLeaguePage.html">
-			<button class="finishButton" id="finish_draft">Finish Draft</button>
-			</form>
-		</div>
-		<br />
+		?>
 		
 	</body>
 		

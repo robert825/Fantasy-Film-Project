@@ -71,17 +71,6 @@
 		
 		var numPlayers = "<?php echo $_SESSION['players_global']; ?>";
 		addPlayers(numPlayers);
-		
-		/* var xmlhttp = new XMLHttpRequest();
-		xmlhttp.onreadystatechange = function() {
-		    if (this.readyState == 4 && this.status == 200) {
-		        myObj = JSON.parse(this.responseText);
-		        addPlayers(myObj[1]);
-		    }
-		};
-		
-		xmlhttp.open("GET", "createLeague.php", true);
-		xmlhttp.send(); */
 		</script>
 		
 	</body>
