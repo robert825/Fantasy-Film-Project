@@ -1,3 +1,4 @@
+<?php session_start(); ?>
 <!DOCTYPE html>
 <html lang="en-us">
 <head>
@@ -12,7 +13,7 @@
     <link rel="stylesheet" type="text/css" href="index.css" />
     
 </head>
-	<body onload="setFocus(); alert('Please complete empty fields!');">
+	<body onload="setFocus()">
 		<script type="text/javascript" src="index.js"></script>
 		<div class="headerDiv">
 			<a href="homePage.html"><img src="images\FantasyFilmLogo.jpg"></a>
@@ -20,7 +21,7 @@
 		<div class="div1"></div>
 		<h2>Set up your league: </h2>
 		
-		<form action="createLeague.php" method="post"> 
+		<form action="<?php echo $_SERVER['PHP_SELF']; ?>" method="post"> 
 		<div class="div2" style="padding: 20px; width: 450px;">
 			<table>
 				<tr><td>Name of League:</td><td> <input name="name" type="text" placeholder="enter league name..." /></td><tr>
@@ -78,6 +79,43 @@
   			<input type = "submit" name = "submit" value = "Create League" class = "createLeagueButton" />
  		</form> 
  		
+ 		<?PHP
+			
+	if ($_SERVER['REQUEST_METHOD'] == 'POST') {
+		if (isSet($_POST['name'])) {
+			$_SESSION['name_global'] = trim($_POST['name']);
+		}
+		if (isSet($_POST['players'])) {
+			$_SESSION['players_global'] = trim($_POST['players']);
+		}
+		if (isSet($_POST['movies'])) {
+			$_SESSION['movies_global'] = trim($_POST['movies']);
+		}
+		if (isSet($_POST['season'])) {
+			$_SESSION['season_global'] = trim($_POST['season']);
+		}
+		if (isSet($_POST['league'])) {
+			$_SESSION['league_global'] = trim($_POST['league']);
+		}
+		
+		if ($_SESSION['name_global'] != NULL && 
+			$_SESSION['players_global'] != NULL && 
+			$_SESSION['movies_global'] != NULL && 
+			$_SESSION['season_global'] != NULL && 
+			$_SESSION['league_global'] != NULL)
+		{	
+			header("Location: addPlayersPage.php");
+		}
+		else {
+			echo '<script language="javascript">';
+			echo 'alert("Please complete empty form fields!")';
+			echo '</script>';
+		}
+	}
+		$_SESSION['league_details'] = array($_SESSION['name_global'], $_SESSION['players_global'], $_SESSION['movies_global'], $_SESSION['season_global'], $_SESSION['league_global']);
+		/*$myJSON = json_encode($_SESSION['league_details']);*/
+		/*echo $myJSON;*/
+	?>
 	
 	</body>
 </html>
