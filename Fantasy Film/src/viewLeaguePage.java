@@ -74,11 +74,59 @@ public class viewLeaguePage extends HttpServlet {
 		   toClient.println("<br/>");
 		   toClient.println("<br/>");
 		   
+		   // here is where we will load in the PHP $_SESSION variables
+		   int rounds = 5;
+		   int players = 5;
 		   
-
+		   toClient.println("<table class=\"movieSelectBoxTable\" border=\"1\" cellspacing=\"0\" cellpadding=\"5\"> ";
+		   toClient.println("<tr>");
+		   toClient.println("<th></th>");
+		   for(int i=1; i<=players; i++)
+		   {
+			   toClient.println("<th>Player " + i + "</th>");
+			   toClient.println("<th></th>");
+		   }
+		   
+		   toClient.println("</tr>");
+		   toClient.println("<tr>");
+		   toClient.println("<th>Round</th>");
+		   
+		   for(int i=1; i<=players; i++)
+		   {
+			   toClient.println("<th>Movie</th>");
+			   toClient.println("<th>Box Office Revenue</th>");
+		   }
+		   
+		   toClient.println("</tr>");
+		   toClient.println("<tr>");
+		   
+		   for(int j=1; j<=rounds; j++)
+		   {
+			   toClient.println("<tr>");
+			   toClient.println("<th>" + j + "</th>");
+			   for(int i=0; i<players*2; i++)
+			   {
+				   toClient.println("<td align=\"center\"></td>");
+			   }
+			   toClient.println("</tr>");
+		   }
+			
+		   toClient.println("<tr>");
+		   toClient.println("<th>Total</th>");
+		   for(int i=1; i<=players; i++)
+		   {
+			   toClient.println("<th>All Movies:</th>");
+			   toClient.println("<td align=\"center\"></td>");
+		   }
+		   
+		   toClient.println("</tr>");
+		   toClient.println("</table>");
+		   toClient.println("<br/>");
+		   toClient.println("<br/>");
+		   toClient.println("<br/>");
+			
 		   toClient.println("</body>");
-		
-	}
+		}
 	}
 
 }
