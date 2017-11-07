@@ -45,6 +45,7 @@ public class viewLeaguePage extends HttpServlet {
 			   String para;
 			   Enumeration paraNames = request.getParameterNames ();
 
+			   toClient.println("<?php session_start(); ?>");
 			   toClient.println ("<!DOCTYPE html>");
 			   toClient.println ("<html lang=\"en-us\">");
 			   toClient.println ("<head>");
@@ -67,8 +68,13 @@ public class viewLeaguePage extends HttpServlet {
 			   toClient.println("<br/>");
 			   
 			   // here is where we will load in the PHP $_SESSION variables
-			   int rounds = 5;
-			   int players = 5;
+			   String roundsString = request.getParameter("<?php echo \"$_SESSION['movies_global']\"; ?>");
+			   int rounds = Integer.parseInt(roundsString);
+			   String playersString = request.getParameter("<?php echo \"$_SESSION['players_global']\"; ?>");
+			   int players = Integer.parseInt(playersString);
+			   
+			   //int rounds = 5;
+			   //int players = 5;
 			   
 			   toClient.println("<table class=\"movieSelectBoxTable\" border=\"1\" cellspacing=\"0\" cellpadding=\"5\"> ");
 			   toClient.println("<tr>");
