@@ -78,7 +78,7 @@
 		</div>
   			<input type = "submit" name = "submit" value = "Create League" class = "createLeagueButton" />
  		</form> 
- 		
+ 		 		
  		<?PHP
 			
 	if ($_SERVER['REQUEST_METHOD'] == 'POST') {

@@ -28,6 +28,8 @@ public class viewLeaguePage extends HttpServlet {
     public viewLeaguePage() {
         // TODO Auto-generated constructor stub
     }
+    
+    
 
 	/**
 	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse response)
@@ -54,34 +56,34 @@ public class viewLeaguePage extends HttpServlet {
 			   toClient.println("<meta name=\"viewport\">");
 			   toClient.println("<meta charset=\"utf-8\">");
 			   toClient.println("<script src=\"http://code.jquery.com/jquery-3.2.1.min.js\"></script>");
-			   toClient.println("<link rel=\"stylesheet\" type=\"text/css\" href=\"index.css\" />");
 			   toClient.println ("</head>");
 
 			   toClient.println ("<body>");
 			   
 			   toClient.println("<script type=\"text/javascript\" src=\"index.js\"></script>");
 			   toClient.println("<div class=\"headerDiv\">");
-			   toClient.println("<a href=\"homePage.html\"><img src=\"FantasyFilmLogo.jpg\"></a>");
+			   toClient.println("<a href=\"WebContent/Film Fantasy/homePage.html\"><img src=\"FantasyFilmLogo.jpg\"></a>");
 			   toClient.println("</div>");
-			   toClient.println("<div class=\"div1\"></div>");
+			   toClient.println("<div style=\"background-color: #cc1216; height: 2px; margin: 10px; position: static;\"></div>");
 			   toClient.println("<br/>");
 			   toClient.println("<br/>");
 			   
 			   // here is where we will load in the PHP $_SESSION variables
-			   String roundsString = request.getParameter("<?php echo \"$_SESSION['movies_global']\"; ?>");
+			   String roundsString = request.getParameter("movies");
 			   int rounds = Integer.parseInt(roundsString);
-			   String playersString = request.getParameter("<?php echo \"$_SESSION['players_global']\"; ?>");
+			   String playersString = request.getParameter("players");
 			   int players = Integer.parseInt(playersString);
+			   String [] playerNames = request.getParameterValues("playerNames[]");
 			   
 			   //int rounds = 5;
 			   //int players = 5;
 			   
-			   toClient.println("<table class=\"movieSelectBoxTable\" border=\"1\" cellspacing=\"0\" cellpadding=\"5\"> ");
+			   toClient.println("<table class=\"movieSelectBoxTable\" style=\"border-style: solid, border-color: black; border-width: thick; margin-right: 5px; margin-bottom:5px; width: 100%; height: 100%;\" border=\"1\" cellspacing=\"0\" cellpadding=\"5\"> ");
 			   toClient.println("<tr>");
 			   toClient.println("<th></th>");
 			   for(int i=1; i<=players; i++)
 			   {
-				   toClient.println("<th>Player " + i + "</th>");
+				   toClient.println("<th>" + playerNames[i-1] + "</th>");
 				   toClient.println("<th></th>");
 			   }
 			   
