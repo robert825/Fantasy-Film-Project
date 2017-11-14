@@ -73,7 +73,7 @@
 		</div>
 
 		<?php
-		echo '<form action="../../src/viewLeaguePage.java" method="post">';
+		echo '<form action="viewLeaguePage.java" method="post">';
 		 echo '<div class="playerTableDiv">';
 			echo '<table class="movieSelectBoxTable" border="1" cellspacing="0" cellpadding="5">'; 
 				echo '<tr>';      

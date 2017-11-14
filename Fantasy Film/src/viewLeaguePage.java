@@ -16,9 +16,9 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 /**
- * Servlet implementation class ffservlet
+ * Servlet implementation class viewLeaguePage
  */
-@WebServlet("/ffservlet")
+@WebServlet("/viewLeaguePage")
 public class viewLeaguePage extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 
@@ -78,7 +78,7 @@ public class viewLeaguePage extends HttpServlet {
 		   int rounds = 5;
 		   int players = 5;
 		   
-		   toClient.println("<table class=\"movieSelectBoxTable\" border=\"1\" cellspacing=\"0\" cellpadding=\"5\"> ";
+		   toClient.println("<table class=\"movieSelectBoxTable\" border=\"1\" cellspacing=\"0\" cellpadding=\"5\"> ");
 		   toClient.println("<tr>");
 		   toClient.println("<th></th>");
 		   for(int i=1; i<=players; i++)
