@@ -39,51 +39,16 @@
 				<thead>
 				<tr>
 					<th>Title</th>
-				<tr>      
-				  <td align="center" class="available" id="m1" onclick="draft('m1')">Movie 1</td>
-				</tr>
-				<tr>      
-				  <td align="center" class="available" id="m2" onclick="draft('m2')">Movie 2</td>
-				</tr>
-				<tr>      
-				  <td align="center" class="available" id="m3" onclick="draft('m3')">Movie 3</td>
-				</tr>
-				<tr>      
-				  <td align="center" class="available" id="m4" onclick="draft('m4')">Movie 4</td>
-				</tr>
-				<tr>      
-				  <td align="center" class="available" id="m5" onclick="draft('m5')">Movie 5</td>
-				</tr>
-				<tr>      
-				  <td align="center" class="available" id="m6" onclick="draft('m6')">Movie 6</td>
-				</tr>
-				<tr>      
-				  <td align="center" class="available" id="m7" onclick="draft('m7')">Movie 7</td>
-				</tr>
-				<tr>      
-				  <td align="center" class="available" id="m8" onclick="draft('m8')">Movie 8</td>
-				</tr>
-				<tr>      
-				  <td align="center" class="available" id="m9" onclick="draft('m9')">Movie 9</td>
-				</tr>
-				<tr>      
-				  <td align="center" class="available" id="m10" onclick="draft('m10')">Movie 10</td>
-				</tr>
-				<tr>      
-				  <td align="center" class="available" id="m11" onclick="draft('m1')">Movie 11</td>
-				</tr>
-				<tr>      
-				  <td align="center" class="available" id="m12" onclick="draft('m2')">Movie 12</td>
-				</tr>
-				<tr>      
-				  <td align="center" class="available" id="m13" onclick="draft('m3')">Movie 13</td>
-				</tr>
-				<tr>      
-				  <td align="center" class="available" id="m14" onclick="draft('m4')">Movie 14</td>
-				</tr>
-				<tr>      
-				  <td align="center" class="available" id="m15" onclick="draft('m5')">Movie 15</td>
-				</tr>
+				<?php 
+				$movieList = array("Movie A", "Movie B", "Movie C", "Movie D", "test");
+				for($i = 0; $i < count($movieList); $i++)
+				{
+					echo "<tr>"; 
+					echo "<td align=\"center\" class=\"available\" id=\"" .$movieList[$i]. "\" onclick=\"draft('" .$movieList[$i]. "')\">" .$movieList[$i]. "</td>";     
+				  	echo "</tr>";
+				}
+				
+				?>
 			</table>
 		</div>
 
