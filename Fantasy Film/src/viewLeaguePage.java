@@ -47,7 +47,10 @@ public class viewLeaguePage extends HttpServlet {
 			   String para;
 			   Enumeration paraNames = request.getParameterNames ();
 
+<<<<<<< HEAD
 			   toClient.println("<?php session_start(); ?>");
+=======
+>>>>>>> 9d6a4e9e4519913a6bb8e1316d773e872b159536
 			   toClient.println ("<!DOCTYPE html>");
 			   toClient.println ("<html lang=\"en-us\">");
 			   toClient.println ("<head>");
@@ -98,14 +101,21 @@ public class viewLeaguePage extends HttpServlet {
 			   }
 			   
 			   toClient.println("</tr>");
-			   toClient.println("<tr>");
+			   //toClient.println("<tr>");
 			   
 			   for(int j=1; j<=rounds; j++)
 			   {
 				   toClient.println("<tr>");
+<<<<<<< HEAD
 				   toClient.println("<th>" + j + "</th>");
 				   for(int i=0; i<players*2; i++)
 				   {
+=======
+				   toClient.println("<th>" + "players" + "</th>");
+				   for(int i=0; i<players*2; i++)
+				   {
+					   //toClient.println("<td align=\"center\">" + "</td>");
+>>>>>>> 9d6a4e9e4519913a6bb8e1316d773e872b159536
 					   toClient.println("<td align=\"center\"></td>");
 				   }
 				   toClient.println("</tr>");
