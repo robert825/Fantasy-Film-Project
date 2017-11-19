@@ -1022,6 +1022,7 @@ java.lang.NullPointerException
 
 !ENTRY org.eclipse.jface.text 2 0 2017-11-01 14:16:09.915
 !MESSAGE Duplicate template id: 'org.eclipse.wst.xslt.templates.xpath.round'
+<<<<<<< HEAD
 
 !ENTRY org.eclipse.wst.server.discovery 1 0 2017-11-06 17:43:12.462
 !MESSAGE already installed: org.eclipse.jst.server.generic.jonas4
@@ -3711,3 +3712,5 @@ java.lang.IllegalArgumentException: Version 8.0 of project facet jst.appclient d
 	at org.eclipse.jst.jee.ui.internal.navigator.Web25ContentProvider.getNewContentProviderInstance(Web25ContentProvider.java:69)
 	at org.eclipse.jst.jee.ui.internal.navigator.LoadingJeeDDJob.run(LoadingJeeDDJob.java:50)
 	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:56)
+=======
+>>>>>>> parent of 71980df... Changes

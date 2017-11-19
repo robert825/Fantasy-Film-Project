@@ -9,6 +9,7 @@
 	<classpathentry kind="con" path="org.eclipse.jst.j2ee.internal.web.container"/>
 	<classpathentry kind="con" path="org.eclipse.jst.j2ee.internal.module.container"/>
 	<classpathentry kind="lib" path="C:/apache-tomcat-8.0.47/lib/servlet-api.jar"/>
+<<<<<<< HEAD
 	<classpathentry kind="lib" path="C:/apache-tomcat-8.0.47/lib/tomcat-api.jar"/>
 	<classpathentry kind="lib" path="C:/Program Files/Apache Software Foundation/Tomcat 8.0/lib/annotations-api.jar"/>
 	<classpathentry kind="lib" path="C:/Program Files/Apache Software Foundation/Tomcat 8.0/lib/catalina.jar"/>
@@ -35,5 +36,7 @@
 	<classpathentry kind="lib" path="C:/Program Files/Apache Software Foundation/Tomcat 8.0/lib/tomcat-util-scan.jar"/>
 	<classpathentry kind="lib" path="C:/Program Files/Apache Software Foundation/Tomcat 8.0/lib/tomcat-websocket.jar"/>
 	<classpathentry kind="lib" path="C:/Program Files/Apache Software Foundation/Tomcat 8.0/lib/websocket-api.jar"/>
+=======
+>>>>>>> parent of 71980df... Changes
 	<classpathentry kind="output" path="build/classes"/>
 </classpath>

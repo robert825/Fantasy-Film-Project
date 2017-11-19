@@ -39,6 +39,7 @@
 				<thead>
 				<tr>
 					<th>Title</th>
+<<<<<<< HEAD
 				<?php 
 				$movieList = array("Movie A", "Movie B", "Movie C", "Movie D", "test");
 				for($i = 0; $i < count($movieList); $i++)
@@ -49,11 +50,43 @@
 				}
 				
 				?>
+=======
+				<tr>      
+				  <td align="center" class="available" id="m1" onclick="draft('m1')">Movie 1</td>
+				</tr>
+				<tr>      
+				  <td align="center" class="available" id="m2" onclick="draft('m2')">Movie 2</td>
+				</tr>
+				<tr>      
+				  <td align="center" class="available" id="m3" onclick="draft('m3')">Movie 3</td>
+				</tr>
+				<tr>      
+				  <td align="center" class="available" id="m4" onclick="draft('m4')">Movie 4</td>
+				</tr>
+				<tr>      
+				  <td align="center" class="available" id="m5" onclick="draft('m5')">Movie 5</td>
+				</tr>
+				<tr>      
+				  <td align="center" class="available" id="m6" onclick="draft('m6')">Movie 6</td>
+				</tr>
+				<tr>      
+				  <td align="center" class="available" id="m7" onclick="draft('m7')">Movie 7</td>
+				</tr>
+				<tr>      
+				  <td align="center" class="available" id="m8" onclick="draft('m8')">Movie 8</td>
+				</tr>
+				<tr>      
+				  <td align="center" class="available" id="m9" onclick="draft('m9')">Movie 9</td>
+				</tr>
+				<tr>      
+				  <td align="center" class="available" id="m10" onclick="draft('m10')">Movie 10</td>
+				</tr>
+>>>>>>> parent of 71980df... Changes
 			</table>
 		</div>
 
 		<?php
-		echo '<form action="http://localhost:8080/Fantasy_Film/viewLeaguePage" method="get">';
+		echo '<form action="viewLeaguePage.java" method="post">';
 		 echo '<div class="playerTableDiv">';
 			echo '<table class="movieSelectBoxTable" border="1" cellspacing="0" cellpadding="5">'; 
 				echo '<tr>';      
@@ -101,6 +134,7 @@
 		echo '<br/>';
 		echo '<br/>';
 		echo '<br/>';
+<<<<<<< HEAD
 		echo '<input type="hidden" name="players" value="' . $_SESSION['players_global'] . '"/>';
 		echo '<input type="hidden" name="movies" value="' . $_SESSION['movies_global'] . '"/> ';
 		foreach($_SESSION['playerNames_global'] as $name) {
@@ -109,6 +143,8 @@
 		foreach($_SESSION['moviePicks'] as $pick) {
 			echo '<input type="hidden" name="moviePicks[]" value="' . $pick . '"/> ';
 		}
+=======
+>>>>>>> parent of 71980df... Changes
 			echo '<input type = "submit" name = "submit" value = "Finish Draft" class = "finishButton" />';
 			echo '</form>';
 		echo '<br />';
