@@ -98,15 +98,15 @@ public class viewLeaguePage extends HttpServlet {
 			   }
 			   
 			   toClient.println("</tr>");
-			   toClient.println("<tr>");
+			   //toClient.println("<tr>");
 			   
 			   for(int j=1; j<=rounds; j++)
 			   {
 				   toClient.println("<tr>");
-				   toClient.println("<th>" + j + "</th>");
-				   for(int i=1; i<=players; i++)
+				   toClient.println("<th>" + "players" + "</th>");
+				   for(int i=0; i<players*2; i++)
 				   {
-					   toClient.println("<td align=\"center\">" + moviePicks[0] + "</td>");
+					   //toClient.println("<td align=\"center\">" + "</td>");
 					   toClient.println("<td align=\"center\"></td>");
 				   }
 				   toClient.println("</tr>");

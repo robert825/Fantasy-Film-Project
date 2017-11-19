@@ -53,7 +53,7 @@
 		</div>
 
 		<?php
-		echo '<form action="http://localhost:8080/Fantasy_Film/Film%20Fantasy/draftRecap.jsp" method="get">';
+		echo '<form action="http://localhost:8080/CS4640/CS4640-Project/Fantasy Film/src/viewLeaguePage" method="get">';
 		 echo '<div class="playerTableDiv">';
 			echo '<table class="movieSelectBoxTable" border="1" cellspacing="0" cellpadding="5">'; 
 				echo '<tr>';      
