@@ -47,7 +47,6 @@ public class viewLeaguePage extends HttpServlet {
 			   String para;
 			   Enumeration paraNames = request.getParameterNames ();
 
-			   toClient.println("<?php session_start(); ?>");
 			   toClient.println ("<!DOCTYPE html>");
 			   toClient.println ("<html lang=\"en-us\">");
 			   toClient.println ("<head>");

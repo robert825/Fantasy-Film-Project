@@ -40,7 +40,7 @@
 				<tr>
 					<th>Title</th>
 				<?php 
-				$movieList = array("Movie A", "Movie B", "Movie C", "Movie D", "test");
+				$movieList = array("Movie A", "Movie B", "Movie C", "Movie D", "Movie E", "Movie F", "Movie G", "Movie H", "Movie I", "Movie J", "Movie K", "Movie L", "Movie M", "Movie N");
 				for($i = 0; $i < count($movieList); $i++)
 				{
 					echo "<tr>"; 
@@ -53,7 +53,7 @@
 		</div>
 
 		<?php
-		echo '<form action="http://localhost:8080/Fantasy_Film/viewLeaguePage" method="get">';
+		echo '<form action="http://localhost:8080/Fantasy_Film/Film%20Fantasy/draftRecap.jsp" method="get">';
 		 echo '<div class="playerTableDiv">';
 			echo '<table class="movieSelectBoxTable" border="1" cellspacing="0" cellpadding="5">'; 
 				echo '<tr>';      
