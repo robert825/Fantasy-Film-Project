@@ -28,6 +28,8 @@ public class viewLeaguePage extends HttpServlet {
     public viewLeaguePage() {
         // TODO Auto-generated constructor stub
     }
+    
+    
 
 	/**
 	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse response)
@@ -35,25 +37,17 @@ public class viewLeaguePage extends HttpServlet {
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// TODO Auto-generated method stub
 		//response.getWriter().append("Served at: ").append(request.getContextPath());
-	}
-
-	/**
-	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse response)
-	 */
-	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		// TODO Auto-generated method stub
-		//doGet(request, response);
-
+		
 		{   
-		   // first, set the "content type" header of the response
-		   response.setContentType ("text/html");
-		   //Get the response's PrintWriter to return text to the client.
-		   PrintWriter toClient = response.getWriter ();
+			   // first, set the "content type" header of the response
+			   response.setContentType ("text/html");
+			   //Get the response's PrintWriter to return text to the client.
+			   PrintWriter toClient = response.getWriter ();
 
-<<<<<<< HEAD
 			   String para;
 			   Enumeration paraNames = request.getParameterNames ();
-			   
+
+			   toClient.println("<?php session_start(); ?>");
 			   toClient.println ("<!DOCTYPE html>");
 			   toClient.println ("<html lang=\"en-us\">");
 			   toClient.println ("<head>");
@@ -80,77 +74,38 @@ public class viewLeaguePage extends HttpServlet {
 			   String playersString = request.getParameter("players");
 			   int players = Integer.parseInt(playersString);
 			   String [] playerNames = request.getParameterValues("playerNames[]");
-			   String [] moviePicks = request.getParameterValues("moviePicks[]");
 			   
 			   //int rounds = 5;
 			   //int players = 5;
 			   
 			   toClient.println("<table class=\"movieSelectBoxTable\" style=\"border-style: solid, border-color: black; border-width: thick; margin-right: 5px; margin-bottom:5px; width: 100%; height: 100%;\" border=\"1\" cellspacing=\"0\" cellpadding=\"5\"> ");
 			   toClient.println("<tr>");
-=======
-		   String para;
-		   Enumeration paraNames = request.getParameterNames ();
-
-		   toClient.println ("<!DOCTYPE html>");
-		   toClient.println ("<html lang=\"en-us\">");
-		   toClient.println ("<head>");
-		   toClient.println ("<title>Fantasy Film League</title>");
-		   toClient.println ("<meta http-equiv=\"Content-Type\" content=\"text/html; charset=ISO-8859-1\">");
-		   toClient.println("<meta name=\"viewport\">");
-		   toClient.println("<meta charset=\"utf-8\">");
-		   toClient.println("<script src=\"http://code.jquery.com/jquery-3.2.1.min.js\"></script>");
-		   toClient.println("<link rel=\"stylesheet\" type=\"text/css\" href=\"index.css\" />");
-		   toClient.println ("</head>");
-
-		   toClient.println ("<body>");
-		   
-		   toClient.println("<script type=\"text/javascript\" src=\"index.js\"></script>");
-		   toClient.println("<div class=\"headerDiv\">");
-		   toClient.println("<a href=\"homePage.html\"><img src=\"FantasyFilmLogo.jpg\"></a>");
-		   toClient.println("</div>");
-		   toClient.println("<div class=\"div1\"></div>");
-		   toClient.println("<br/>");
-		   toClient.println("<br/>");
-		   
-		   // here is where we will load in the PHP $_SESSION variables
-		   int rounds = 5;
-		   int players = 5;
-		   
-		   toClient.println("<table class=\"movieSelectBoxTable\" border=\"1\" cellspacing=\"0\" cellpadding=\"5\"> ");
-		   toClient.println("<tr>");
-		   toClient.println("<th></th>");
-		   for(int i=1; i<=players; i++)
-		   {
-			   toClient.println("<th>Player " + i + "</th>");
->>>>>>> parent of 71980df... Changes
 			   toClient.println("<th></th>");
-		   }
-		   
-		   toClient.println("</tr>");
-		   toClient.println("<tr>");
-		   toClient.println("<th>Round</th>");
-		   
-		   for(int i=1; i<=players; i++)
-		   {
-			   toClient.println("<th>Movie</th>");
-			   toClient.println("<th>Box Office Revenue</th>");
-		   }
-		   
-		   toClient.println("</tr>");
-		   toClient.println("<tr>");
-		   
-		   for(int j=1; j<=rounds; j++)
-		   {
-			   toClient.println("<tr>");
-			   toClient.println("<th>" + j + "</th>");
-			   for(int i=0; i<players*2; i++)
+			   for(int i=1; i<=players; i++)
 			   {
-<<<<<<< HEAD
+				   toClient.println("<th>" + playerNames[i-1] + "</th>");
+				   toClient.println("<th></th>");
+			   }
+			   
+			   toClient.println("</tr>");
+			   toClient.println("<tr>");
+			   toClient.println("<th>Round</th>");
+			   
+			   for(int i=1; i<=players; i++)
+			   {
+				   toClient.println("<th>Movie</th>");
+				   toClient.println("<th>Box Office Revenue</th>");
+			   }
+			   
+			   toClient.println("</tr>");
+			   toClient.println("<tr>");
+			   
+			   for(int j=1; j<=rounds; j++)
+			   {
 				   toClient.println("<tr>");
 				   toClient.println("<th>" + j + "</th>");
-				   for(int i=1; i<=players; i++)
+				   for(int i=0; i<players*2; i++)
 				   {
-					   toClient.println("<td align=\"center\">" + moviePicks[0] + "</td>");
 					   toClient.println("<td align=\"center\"></td>");
 				   }
 				   toClient.println("</tr>");
@@ -161,29 +116,26 @@ public class viewLeaguePage extends HttpServlet {
 			   for(int i=1; i<=players; i++)
 			   {
 				   toClient.println("<th>All Movies:</th>");
-=======
->>>>>>> parent of 71980df... Changes
 				   toClient.println("<td align=\"center\"></td>");
 			   }
+			   
 			   toClient.println("</tr>");
-		   }
-			
-		   toClient.println("<tr>");
-		   toClient.println("<th>Total</th>");
-		   for(int i=1; i<=players; i++)
-		   {
-			   toClient.println("<th>All Movies:</th>");
-			   toClient.println("<td align=\"center\"></td>");
-		   }
-		   
-		   toClient.println("</tr>");
-		   toClient.println("</table>");
-		   toClient.println("<br/>");
-		   toClient.println("<br/>");
-		   toClient.println("<br/>");
-			
-		   toClient.println("</body>");
-		}
+			   toClient.println("</table>");
+			   toClient.println("<br/>");
+			   toClient.println("<br/>");
+			   toClient.println("<br/>");
+				
+			   toClient.println("</body>");
+			}
+		
+	}
+
+	/**
+	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse response)
+	 */
+	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		// TODO Auto-generated method stub
+		
 	}
 
 }
