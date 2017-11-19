@@ -73,6 +73,7 @@ public class viewLeaguePage extends HttpServlet {
 			   String playersString = request.getParameter("players");
 			   int players = Integer.parseInt(playersString);
 			   String [] playerNames = request.getParameterValues("playerNames[]");
+			   String [] moviePicks = request.getParameterValues("moviePicks[]");
 			   
 			   //int rounds = 5;
 			   //int players = 5;
@@ -103,8 +104,9 @@ public class viewLeaguePage extends HttpServlet {
 			   {
 				   toClient.println("<tr>");
 				   toClient.println("<th>" + j + "</th>");
-				   for(int i=0; i<players*2; i++)
+				   for(int i=1; i<=players; i++)
 				   {
+					   toClient.println("<td align=\"center\">" + moviePicks[0] + "</td>");
 					   toClient.println("<td align=\"center\"></td>");
 				   }
 				   toClient.println("</tr>");

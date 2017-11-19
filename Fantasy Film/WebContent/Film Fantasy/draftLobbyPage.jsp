@@ -1,3 +1,5 @@
+<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
+    pageEncoding="ISO-8859-1"%>
 <?php session_start(); ?>
 <!DOCTYPE html>
 <html lang="en-us">
@@ -40,7 +42,7 @@
 				<tr>
 					<th>Title</th>
 				<?php 
-				$movieList = array("Movie A", "Movie B", "Movie C", "Movie D", "Movie E", "Movie F", "Movie G", "Movie H", "Movie I", "Movie J", "Movie K", "Movie L", "Movie M", "Movie N");
+				$movieList = array("Movie A", "Movie B", "Movie C", "Movie D", "test");
 				for($i = 0; $i < count($movieList); $i++)
 				{
 					echo "<tr>"; 
@@ -53,7 +55,7 @@
 		</div>
 
 		<?php
-		echo '<form action="http://localhost:8080/Fantasy_Film/Film%20Fantasy/draftRecap.jsp" method="get">';
+		echo '<form action="http://localhost:8080/Fantasy_Film/viewLeaguePage" method="get">';
 		 echo '<div class="playerTableDiv">';
 			echo '<table class="movieSelectBoxTable" border="1" cellspacing="0" cellpadding="5">'; 
 				echo '<tr>';      
@@ -89,15 +91,7 @@
 		
 		</div>
 		
-		<?php	
-		
-		$dom = new DOMDocument('1.0');
-		$_SESSION['moviePicks'] = array();
-		$picks = array();
-		$picks = $dom->getElementsByTagName("td");
-		foreach ($picks as $pick) {
-			$_SESSION['moviePicks'] = array_push($_SESSION['moviePicks'], $pick->nodeValue);
-		}	
+		<?php		
 		echo '<br/>';
 		echo '<br/>';
 		echo '<br/>';
@@ -106,9 +100,7 @@
 		foreach($_SESSION['playerNames_global'] as $name) {
 			echo '<input type="hidden" name="playerNames[]" value="' . $name . '"/> ';
 		}
-		foreach($_SESSION['moviePicks'] as $pick) {
-			echo '<input type="hidden" name="moviePicks[]" value="' . $pick . '"/> ';
-		}
+
 			echo '<input type = "submit" name = "submit" value = "Finish Draft" class = "finishButton" />';
 			echo '</form>';
 		echo '<br />';
