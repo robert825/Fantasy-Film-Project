@@ -39,7 +39,6 @@
 				<thead>
 				<tr>
 					<th>Title</th>
-<<<<<<< HEAD
 				<tr>      
 				  <td align="center" class="available" id="m1" onclick="draft('m1')">Movie 1</td>
 				</tr>
@@ -85,18 +84,6 @@
 				<tr>      
 				  <td align="center" class="available" id="m15" onclick="draft('m5')">Movie 15</td>
 				</tr>
-=======
-				<?php 
-				$movieList = array("Movie A", "Movie B", "Movie C", "Movie D", "Movie E", "Movie F", "Movie G", "Movie H", "Movie I", "Movie J", "Movie K", "Movie L", "Movie M", "Movie N");
-				for($i = 0; $i < count($movieList); $i++)
-				{
-					echo "<tr>"; 
-					echo "<td align=\"center\" class=\"available\" id=\"" .$movieList[$i]. "\" onclick=\"draft('" .$movieList[$i]. "')\">" .$movieList[$i]. "</td>";     
-				  	echo "</tr>";
-				}
-				
-				?>
->>>>>>> 9d6a4e9e4519913a6bb8e1316d773e872b159536
 			</table>
 		</div>
 
