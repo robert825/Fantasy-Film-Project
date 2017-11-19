@@ -1,3 +1,5 @@
+<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
+    pageEncoding="ISO-8859-1"%>
 <?php session_start(); ?>
 <!DOCTYPE html>
 <html lang="en-us">
@@ -89,15 +91,7 @@
 		
 		</div>
 		
-		<?php	
-		
-		$dom = new DOMDocument('1.0');
-		$_SESSION['moviePicks'] = array();
-		$picks = array();
-		$picks = $dom->getElementsByTagName("td");
-		foreach ($picks as $pick) {
-			$_SESSION['moviePicks'] = array_push($_SESSION['moviePicks'], $pick->nodeValue);
-		}	
+		<?php		
 		echo '<br/>';
 		echo '<br/>';
 		echo '<br/>';
@@ -106,9 +100,7 @@
 		foreach($_SESSION['playerNames_global'] as $name) {
 			echo '<input type="hidden" name="playerNames[]" value="' . $name . '"/> ';
 		}
-		foreach($_SESSION['moviePicks'] as $pick) {
-			echo '<input type="hidden" name="moviePicks[]" value="' . $pick . '"/> ';
-		}
+
 			echo '<input type = "submit" name = "submit" value = "Finish Draft" class = "finishButton" />';
 			echo '</form>';
 		echo '<br />';
