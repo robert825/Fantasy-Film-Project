@@ -20,7 +20,7 @@
 
 <form method="post" action="http://localhost:8080/Fantasy_Film/Film%20Fantasy/viewMoviesPage.jsp">
 
-<div class="div2" style="text-align:center">
+<div class="div2" style="text-align:center; padding: 30px">
 See movies coming out in the next: <select name="duration">
 	<option value="1">1</option>
 	<option value="2">2</option> 
