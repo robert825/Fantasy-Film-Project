@@ -48,13 +48,20 @@ See movies coming out in the next: <select name="duration">
 
 <h1>Movies coming out in the next <jsp:getProperty name="movies" property="duration"  /> month(s): </h1>
 
-<%	String str = "Month = December";
+<%	String[] months = {"December 2017", "January 2018", "February 2018", "March 2018", "April 2018", "May 2018", "June 2018", "July 2018", "August 2018", "September 2018", "October 2018", "November 2018"};
 	for (int i=0; i<movies.getDuration(); i++) { %>
-<%= str %>
-		<jsp:getProperty name="movies" property="month"  /> <br/>
+		<h2 style="font-size: 20px; padding: 0%">
+		<%= months[i] %>
+		</h2>
+		<jsp:getProperty name="movies" property="viewedMovies"  /> <br/>
 <%
 }
 	%>
+	
+	<br/>
+	<br/>
+	<br/>
+	<br/>
 	
 	
 <!--<jsp:getProperty name="movies" property="movies"  />-->
