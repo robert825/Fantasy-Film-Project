@@ -10,7 +10,7 @@
 <body>
 
 <div class="headerDiv">
-	<a href="homePage.html"><img src="images\FantasyFilmLogo.jpg"></a>
+	<a href="http://localhost/CS4640/CS4640-Project/Fantasy%20Film/WebContent/Film%20Fantasy/homePage.html"><img src="images\FantasyFilmLogo.jpg"></a>
 </div>
 <div class="div1"></div>
 

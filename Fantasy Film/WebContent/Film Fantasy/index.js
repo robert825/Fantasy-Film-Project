@@ -9,7 +9,6 @@ function startDraft()
 {
 	currentSlot = document.getElementById("1");
 	currentSlot.style.border = "thick solid red";
-	currentSlot.innerHTML = "select movie...";
 }
 function qMark(i)
 {
@@ -27,17 +26,7 @@ function qMark(i)
 				"place across all rounds.");
 		}
 }
-function draft(movie)
-{
-	var choice = document.getElementById(movie);
-	currentSlot.innerHTML = choice.innerHTML;
-	currentSlot.style.border = "";
-	choice.style.visibility = "hidden";
-	pickNum++;
-	currentSlot = document.getElementById("" + pickNum);
-	currentSlot.style.border = "thick solid red";
-	currentSlot.innerHTML = "select movie...";
-}
+
 
 function setPlayerName() {
 	

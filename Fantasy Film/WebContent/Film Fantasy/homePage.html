@@ -17,10 +17,10 @@
 <div class="headerDiv">
 	<a href="homePage.html"><img src="images\FantasyFilmLogo.jpg" /></a>
 		<div class="div3">
-		<form class="view_league" action="web-component" method="post"> <label>View Existing League:</label><input style="width: 300px; height:25px" type="text" placeholder="enter league name..." /></form>
+		<!-- <form class="view_league" action="web-component" method="post"> <label>View Existing League:</label><input style="width: 300px; height:25px" type="text" placeholder="enter league name..." /></form>
 		<form class = "view_league" action="viewLeaguePage.html">
 			<button class="viewLeagueButton" id="view_league">View League</button>
-		</form>
+		</form> -->
 		</div>
 </div>
 <div class="div1"></div>
@@ -32,15 +32,19 @@
 	scoring features are available through our site, as well as customizable league sizes, length of season, and roster size.</p>
 </div>
 <br/>
-<div>
+
+<table style="margin-left: auto; margin-right: auto">
+<td style="padding: 10px">
 <form action="http://localhost:8080/Fantasy_Film/Film%20Fantasy/viewMoviesPage.jsp">
 	<button class="createLeagueButton" id="view_movies">View All Movies</button>
 </form>
-<br/>
+</td>
+<td style="padding: 10px">
 <form action="createLeaguePage.php">
 <button class="createLeagueButton" id="create_league">Create League!</button>
 </form>
-</div>
+</td>
+</table>
 
 </body>
 </html>

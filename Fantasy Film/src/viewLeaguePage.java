@@ -55,14 +55,13 @@ public class viewLeaguePage extends HttpServlet {
 			   toClient.println ("<meta http-equiv=\"Content-Type\" content=\"text/html; charset=ISO-8859-1\">");
 			   toClient.println("<meta name=\"viewport\">");
 			   toClient.println("<meta charset=\"utf-8\">");
-			   toClient.println("<script src=\"http://code.jquery.com/jquery-3.2.1.min.js\"></script>");
 			   toClient.println ("</head>");
 
 			   toClient.println ("<body>");
 			   
 			   toClient.println("<script type=\"text/javascript\" src=\"index.js\"></script>");
 			   toClient.println("<div class=\"headerDiv\">");
-			   toClient.println("<a href=\"WebContent/Film Fantasy/homePage.html\"><img src=\"FantasyFilmLogo.jpg\"></a>");
+			   toClient.println("<a href=\"http://localhost/CS4640/CS4640-Project/Fantasy%20Film/WebContent/Film%20Fantasy/homePage.html\"><img src=\"http://localhost/CS4640/CS4640-Project/Fantasy%20Film/WebContent/Film%20Fantasy/images/FantasyFilmLogo.jpg\"></a>");
 			   toClient.println("</div>");
 			   toClient.println("<div style=\"background-color: #cc1216; height: 2px; margin: 10px; position: static;\"></div>");
 			   toClient.println("<br/>");
@@ -74,6 +73,8 @@ public class viewLeaguePage extends HttpServlet {
 			   String playersString = request.getParameter("players");
 			   int players = Integer.parseInt(playersString);
 			   String [] playerNames = request.getParameterValues("playerNames[]");
+			   String [] moviePicks = request.getParameterValues("moviePicks[]");
+			   String test = request.getParameter("test");
 			   
 			   //int rounds = 5;
 			   //int players = 5;
@@ -104,9 +105,10 @@ public class viewLeaguePage extends HttpServlet {
 			   {
 				   toClient.println("<tr>");
 				   toClient.println("<th>" + j + "</th>");
-				   for(int i=0; i<players*2; i++)
+				   for(int i=1; i<=players; i++)
 				   {
-					   toClient.println("<td align=\"center\"></td>");
+					   toClient.println("<td align=\"center\">" + test + "</td>");
+					   toClient.println("<td align=\"center\"> $0 </td>");
 				   }
 				   toClient.println("</tr>");
 			   }
@@ -120,11 +122,10 @@ public class viewLeaguePage extends HttpServlet {
 			   }
 			   
 			   toClient.println("</tr>");
-			   toClient.println("</table>");
+			   toClient.println("</table>");;
 			   toClient.println("<br/>");
 			   toClient.println("<br/>");
-			   toClient.println("<br/>");
-				
+			   toClient.println("<br/>");		
 			   toClient.println("</body>");
 			}
 		
