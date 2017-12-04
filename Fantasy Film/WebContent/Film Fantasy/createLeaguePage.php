@@ -66,14 +66,14 @@
 				<option value="9 months">9 months</option>
 				<option value="10 months">10 months</option>
 				<option value="11 months">11 months</option>
-				<option value="1 year">1 year</option>
+				<option value="12 months">12 months</option>
 			</select></td></tr>
 			<tr><td>Type of League:</td> 
-				<td><input type="radio" name="league" value="Total box office revenue">Total box office revenue</input>
-				<button class="questionMarkButton" id="more" onclick="qMark(0)"> ? </button>
+				<td><input type="radio" name="league" value="Total box office revenue" checked="checked">Total box office revenue</input>
+				<button type="button" class="questionMarkButton" id="more" onclick="qMark(0)"> ? </button>
 				<br />
 				<input type="radio" name="league" value="Round by round">Round by round</input>
-				<button class="questionMarkButton" id="more" onclick="qMark(1)"> ? </button></td></tr>
+				<button type="button" class="questionMarkButton" id="more" onclick="qMark(1)"> ? </button></td></tr>
 				</table>
 		</div>
   			<input type = "submit" name = "submit" value = "Create League" class = "createLeagueButton" />
@@ -101,8 +101,7 @@
 		if ($_SESSION['name_global'] != NULL && 
 			$_SESSION['players_global'] != NULL && 
 			$_SESSION['movies_global'] != NULL && 
-			$_SESSION['season_global'] != NULL && 
-			$_SESSION['league_global'] != NULL)
+			$_SESSION['season_global'] != NULL)
 		{	
 			header("Location: addPlayersPage.php");
 		}
