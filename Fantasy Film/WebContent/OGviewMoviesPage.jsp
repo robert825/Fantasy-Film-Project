@@ -7,7 +7,7 @@
 <title>Fantasy Film League</title>
 <link rel="stylesheet" type="text/css" href="index.css" />
 </head>
-<body onLoad="loadMonths()">
+<body>
 
 <div class="headerDiv">
 	<a href="http://localhost/CS4640/CS4640-Project/Fantasy%20Film/WebContent/Film%20Fantasy/homePage.html"><img src="images\FantasyFilmLogo.jpg"></a>
@@ -43,20 +43,15 @@ See movies coming out in the next: <select name="duration">
 	<jsp:setProperty name="movies" property="duration" ></jsp:setProperty> 
 </jsp:useBean>
 
-<input type="submit" name="submit" value="see movies" class="createLeagueButton" onclick="loadMonths()">
+<input type="submit" name="submit" value="see movies" class="createLeagueButton">
 </form>
 
 <h1>Movies coming out in the next <jsp:getProperty name="movies" property="duration"  /> month(s): </h1>
 
-<%	
-String year = "2017";
-for (int i=0; i<movies.getDuration(); i++) { 
-		if (i > 0) {
-			year = "2018";
-		}
-%>
+<%	String[] months = {"December 2017", "January 2018", "February 2018", "March 2018", "April 2018", "May 2018", "June 2018", "July 2018", "August 2018", "September 2018", "October 2018", "November 2018"};
+	for (int i=0; i<movies.getDuration(); i++) { %>
 		<h2 style="font-size: 20px; padding: 0%">
-		<span id="month"></span> <%= year %>
+		<%= months[i] %>
 		</h2>
 		<jsp:getProperty name="movies" property="viewedMovies"  /> <br/>
 <%
@@ -71,22 +66,6 @@ for (int i=0; i<movies.getDuration(); i++) {
 	
 <!--<jsp:getProperty name="movies" property="movies"  />-->
 
-
-<script> 
-function loadMonths(i) {
-	  var xhttp = new XMLHttpRequest();
-	  xhttp.onreadystatechange = function() {
-	    if (this.readyState == 4 && this.status == 200) {
-	    	var months = document.getElementsByTagName('month');
-	    	document.getElementById("month").innerHTML = months[0];
-	    	
-	    }
-	  };
-	  xhttp.open("GET", "movies.xml", true);
-	  xhttp.send();
-}	  
-
-</script>
 
 </body>
 </html>
