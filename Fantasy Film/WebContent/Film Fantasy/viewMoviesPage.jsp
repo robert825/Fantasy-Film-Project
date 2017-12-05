@@ -73,11 +73,12 @@ for (int i=0; i<movies.getDuration(); i++) {
 
 
 <script> 
-function loadMonths(i) {
+function loadMonths() {
 	  var xhttp = new XMLHttpRequest();
 	  xhttp.onreadystatechange = function() {
 	    if (this.readyState == 4 && this.status == 200) {
-	    	var months = document.getElementsByTagName('month');
+	    	var xmlDoc = this.responseXML;
+	    	var months = xmlDoc.getElementsByTagName("month");
 	    	document.getElementById("month").innerHTML = months[0];
 	    	
 	    }
