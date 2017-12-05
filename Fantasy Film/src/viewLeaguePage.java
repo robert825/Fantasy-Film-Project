@@ -106,13 +106,14 @@ public class viewLeaguePage extends HttpServlet {
 				   toClient.println("<th>" + i + "</th>");
 				   for(int j=1; j<=players; j++)
 				   {
-					   /*if (i%2 == 1) {
-						   int id = ((i-1)*players) + j - 1;
+					   int id = 0;
+					   if (i%2 == 1) {
+						   id = ((i-1)*players) + j - 1;
 					   }
 					   else {
-						   int id = (i*players) - j;
-					   }*/
-					   toClient.println("<td align=\"center\">" + "</td>");
+						   id = (i*players) - j;
+					   }
+					   toClient.println("<td align=\"center\">" + moviePicks[id] + "</td>");
 					   toClient.println("<td align=\"center\"> $0 </td>");
 				   }
 				   toClient.println("</tr>");
@@ -123,7 +124,7 @@ public class viewLeaguePage extends HttpServlet {
 			   for(int i=1; i<=players; i++)
 			   {
 				   toClient.println("<th>All Movies:</th>");
-				   toClient.println("<td align=\"center\"></td>");
+				   toClient.println("<td align=\"center\"> $0 </td>");
 			   }
 			   
 			   toClient.println("</tr>");
