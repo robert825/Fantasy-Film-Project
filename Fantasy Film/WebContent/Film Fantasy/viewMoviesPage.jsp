@@ -56,7 +56,54 @@ for (int i=0; i<movies.getDuration(); i++) {
 		}
 %>
 		<h2 style="font-size: 20px; padding: 0%">
-		<span id="month"></span> <%= year %>
+<% 		if (i==0) {
+%>
+		<span id="dec"></span> <%= year %>
+<%} %>
+<% 		if (i==1) {
+%>
+		<span id="jan"></span> <%= year %>
+<%} %>
+<% 		if (i==2) {
+%>
+		<span id="feb"></span> <%= year %>
+<%} %>
+<% 		if (i==3) {
+%>
+		<span id="mar"></span> <%= year %>
+<%} %>
+<% 		if (i==4) {
+%>
+		<span id="apr"></span> <%= year %>
+<%} %>
+<% 		if (i==5) {
+%>
+		<span id="may"></span> <%= year %>
+<%} %>
+<% 		if (i==6) {
+%>
+		<span id="jun"></span> <%= year %>
+<%} %>
+<% 		if (i==7) {
+%>
+		<span id="jul"></span> <%= year %>
+<%} %>
+<% 		if (i==8) {
+%>
+		<span id="aug"></span> <%= year %>
+<%} %>
+<% 		if (i==9) {
+%>
+		<span id="sep"></span> <%= year %>
+<%} %>
+<% 		if (i==10) {
+%>
+		<span id="oct"></span> <%= year %>
+<%} %>
+<% 		if (i==11) {
+%>
+		<span id="nov"></span> <%= year %>
+<%} %>
 		</h2>
 		<jsp:getProperty name="movies" property="viewedMovies"  /> <br/>
 <%
@@ -78,8 +125,21 @@ function loadMonths() {
 	  xhttp.onreadystatechange = function() {
 	    if (this.readyState == 4 && this.status == 200) {
 	    	var xmlDoc = this.responseXML;
-	    	var months = xmlDoc.getElementsByTagName("month");
-	    	document.getElementById("month").innerHTML = months[0];
+	    	var months = this.responseText;
+	    	var listMonths = months.split(" ");
+	    	document.getElementById("dec").innerHTML = listMonths[0];
+	    	document.getElementById("jan").innerHTML = listMonths[1];
+	    	document.getElementById("feb").innerHTML = listMonths[2];
+	    	document.getElementById("mar").innerHTML = listMonths[3];
+	    	document.getElementById("apr").innerHTML = listMonths[4];
+	    	document.getElementById("may").innerHTML = listMonths[5];
+	    	document.getElementById("jun").innerHTML = listMonths[6];
+	    	document.getElementById("jul").innerHTML = listMonths[7];
+	    	document.getElementById("aug").innerHTML = listMonths[8];
+	    	document.getElementById("sep").innerHTML = listMonths[9];
+	    	document.getElementById("oct").innerHTML = listMonths[10];
+	    	document.getElementById("nov").innerHTML = listMonths[11];
+	    	
 	    	
 	    }
 	  };

@@ -113,7 +113,12 @@ public class viewLeaguePage extends HttpServlet {
 					   else {
 						   id = (i*players) - j;
 					   }
-					   toClient.println("<td align=\"center\">" + moviePicks[id] + "</td>");
+					   if (moviePicks[id].equals("undefined")) {
+						   toClient.println("<td align=\"center\"></td>");
+					   }
+					   else {
+						   toClient.println("<td align=\"center\">" + moviePicks[id] + "</td>");
+					   }
 					   toClient.println("<td align=\"center\"> $0 </td>");
 				   }
 				   toClient.println("</tr>");
