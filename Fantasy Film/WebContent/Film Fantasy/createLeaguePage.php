@@ -112,8 +112,7 @@
 		}
 	}
 		$_SESSION['league_details'] = array($_SESSION['name_global'], $_SESSION['players_global'], $_SESSION['movies_global'], $_SESSION['season_global'], $_SESSION['league_global']);
-		/*$myJSON = json_encode($_SESSION['league_details']);*/
-		/*echo $myJSON;*/
+		
 	?>
 	
 	</body>

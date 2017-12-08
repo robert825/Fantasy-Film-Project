@@ -75,9 +75,6 @@ public class viewLeaguePage extends HttpServlet {
 			   String [] playerNames = request.getParameterValues("playerNames[]");
 			   String [] moviePicks = request.getParameterValues("moviePicks[]");
 			   
-			   //int rounds = 5;
-			   //int players = 5;
-			   
 			   toClient.println("<table class=\"movieSelectBoxTable\" style=\"border-style: solid, border-color: black; border-width: thick; margin-right: 5px; margin-bottom:5px; width: 100%; height: 100%;\" border=\"1\" cellspacing=\"0\" cellpadding=\"5\"> ");
 			   toClient.println("<tr>");
 			   toClient.println("<th></th>");

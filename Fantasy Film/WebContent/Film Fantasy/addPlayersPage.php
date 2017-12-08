@@ -54,24 +54,8 @@
 				echo '</script>';
 			}
 		}
-		/*$myJSON = json_encode($_SESSION['playerNames_global']);*/
-		/*echo $myJSON;*/
+
 	?>
-	
-		<script type="text/javascript" > 
-		function addPlayers(num) 
-		{
-			var playerList = document.getElementsByClassName("player");
-			var labelList = document.getElementsByClassName("playerLabel");
-			for (var i=9; i >= num; i--) {
-				playerList[i].style.display = "none";
-				labelList[i].style.display = "none";
-			}
-		}
-		
-		var numPlayers = "<?php echo $_SESSION['players_global']; ?>";
-		addPlayers(numPlayers);
-		</script>
 		
 	</body>
 </html>

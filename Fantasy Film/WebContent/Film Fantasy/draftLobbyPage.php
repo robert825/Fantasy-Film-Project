@@ -24,7 +24,7 @@
 		
 		<div class="headerDiv" ng-controller="myController" ng-init="moviePicks = []; getMovies()" >
 				
-		<div class="movieSelectionBox">
+		<div class="movieSelectionBox" style="width: 25%;">
 			Movies:
 			<br/>
 			<br/>
@@ -80,7 +80,7 @@
 		<?php
 		echo '<form action="http://localhost:8080/Fantasy_Film/viewLeaguePage" method="get" >';
 		 echo '<div class="playerTableDiv">';
-			echo '<table class="movieSelectBoxTable" border="1" cellspacing="0" cellpadding="5">'; 
+			echo '<table class="movieSelectBoxTable" style="height: 720px;" border="1" cellspacing="0" cellpadding="5">'; 
 				echo '<tr>';      
 				  	echo '<th>Round</th>';
 					
